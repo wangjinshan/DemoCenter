@@ -23,8 +23,8 @@ class PublishPopButton: UIButton {
 }
 
 extension UIButton {
-    func layoutButtonEdgeInsets(space:CGFloat) {
-        var labelWidth : CGFloat = 0.0
+    func layoutButtonEdgeInsets(space: CGFloat) {
+        var labelWidth: CGFloat = 0.0
         var imageEdgeInset = UIEdgeInsets.zero
         var labelEdgeInset = UIEdgeInsets.zero
         let imageWith = self.imageView?.frame.size.width
@@ -71,13 +71,13 @@ extension UIView {
 
     func scalingWithTime(time: TimeInterval, scale: CGFloat) {
         UIView.animate(withDuration: time) {
-            self.transform = CGAffineTransform(scaleX: scale,y: scale)
+            self.transform = CGAffineTransform(scaleX: scale, y: scale)
         }
     }
 
     func revolvingWithTime(time: TimeInterval, rotation: CGFloat) {
         UIView.animate(withDuration: time) {
-            self.transform = CGAffineTransform(rotationAngle: rotation);
+            self.transform = CGAffineTransform(rotationAngle: rotation)
         }
     }
 }

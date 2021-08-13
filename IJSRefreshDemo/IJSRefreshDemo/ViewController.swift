@@ -9,7 +9,6 @@
 import UIKit
 import MJRefresh
 
-
 enum FontType: Int {
     case regular
     case light
@@ -25,13 +24,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.tableFooterView = UIView()
-        
+
         tableView.mj_header = BallRefreshHeader(refreshingBlock: {
            UIApplication.shared.openURL(URL(string: "weixin://")!)
         })
-        
+
         tableView.mj_footer = BallRefreshFooterView(refreshingBlock: {
-            
+
         })
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
@@ -42,7 +41,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITableViewDataSource,UITableViewDelegate {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 18
     }
@@ -57,5 +56,3 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
 
     }
 }
-
-

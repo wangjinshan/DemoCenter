@@ -1,4 +1,3 @@
-
 //
 //  RefreshAnimationView.swift
 //  IJSRefreshDemo
@@ -14,7 +13,7 @@ protocol RefreshAnimationViewProtocol: class {
 }
 
 extension RefreshAnimationViewProtocol {
-    func setupAnimation(){}
+    func setupAnimation() {}
 }
 
 class RefreshAnimationBaseView: UIView, RefreshAnimationViewProtocol {
@@ -59,7 +58,7 @@ class RefreshAnimationBaseView: UIView, RefreshAnimationViewProtocol {
         rightView.layer.removeAllAnimations()
     }
 
-    func setupAnimation(){}
+    func setupAnimation() {}
 
     private func createCircle() -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: itemHeight, height: itemHeight))
@@ -73,7 +72,7 @@ class RefreshAnimationBaseView: UIView, RefreshAnimationViewProtocol {
 }
 
 extension RefreshAnimationBaseView {
-    
+
     func createKeyFrameAnimation(keyPath: String) -> CAKeyframeAnimation {
         let animation = CAKeyframeAnimation(keyPath: keyPath)
         animation.isRemovedOnCompletion = false

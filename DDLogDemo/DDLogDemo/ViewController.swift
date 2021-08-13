@@ -16,11 +16,6 @@ class ViewController: UIViewController {
         let str = "12345678910"
         let name = str.prefix(10).base
 
-
-
-
     }
 
-
 }
-

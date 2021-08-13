@@ -29,6 +29,5 @@ class ShareViewController: SLComposeServiceViewController {
     override func didSelectCancel() {
         super.didSelectCancel()
     }
-    
 
 }

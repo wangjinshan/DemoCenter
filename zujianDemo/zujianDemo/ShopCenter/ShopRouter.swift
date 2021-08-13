@@ -25,7 +25,7 @@ class ShopRouter: ZIKViewRouter<ShopController, ZIKViewRouteConfiguration> {
 
     override func prepareDestination(_ destination: ShopController, configuration: ZIKViewRouteConfiguration) {
         destination.name = "1999"
-        
+
     }
 }
 

@@ -30,9 +30,9 @@ extension UIView {
 
 class BallRoatationView: UIView {
 
-    private let firstBallColor = UIColor(red: 220 / 255.0, green: 222 / 255.0 , blue: 225 / 255.0, alpha: 1)
-    private let secondBallColor = UIColor(red: 220 / 255.0, green: 222 / 255.0 , blue: 225 / 255.0, alpha: 1)
-    private let thirdBallColor = UIColor(red: 220 / 255.0, green: 222 / 255.0 , blue: 225 / 255.0, alpha: 1)
+    private let firstBallColor = UIColor(red: 220 / 255.0, green: 222 / 255.0, blue: 225 / 255.0, alpha: 1)
+    private let secondBallColor = UIColor(red: 220 / 255.0, green: 222 / 255.0, blue: 225 / 255.0, alpha: 1)
+    private let thirdBallColor = UIColor(red: 220 / 255.0, green: 222 / 255.0, blue: 225 / 255.0, alpha: 1)
 
     private var radius: CGFloat = 4 // 半径
     private var animationDurtion: TimeInterval = 0.75
@@ -78,7 +78,7 @@ class BallRoatationView: UIView {
 extension BallRoatationView {
 
     func initProgressBar() {
-        centerPoint = CGPoint(x: UIScreen.main.bounds.size.width / 2.0 , y: bounds.height / 2)
+        centerPoint = CGPoint(x: UIScreen.main.bounds.size.width / 2.0, y: bounds.height / 2)
         layer.addSublayer(oneLayer)
         layer.addSublayer(twoLayer)
         layer.addSublayer(threeLayer)
@@ -123,7 +123,7 @@ extension BallRoatationView {
 
         let twoFrameAnimation = CAKeyframeAnimation(keyPath: "position")
         let twopath = CGMutablePath()
-        twopath.move(to:  CGPoint(x: centerPoint.x, y: centerPoint.y))
+        twopath.move(to: CGPoint(x: centerPoint.x, y: centerPoint.y))
         twoFrameAnimation.path = twopath
         twoFrameAnimation.keyTimes = [1.0] as [NSNumber]
         let twoScaleAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
@@ -157,4 +157,3 @@ extension BallRoatationView {
         threeLayer.removeAllAnimations()
     }
 }
-

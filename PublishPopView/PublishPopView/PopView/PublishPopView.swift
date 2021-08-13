@@ -12,7 +12,7 @@ class PublishPopView: UIView {
 
     let backgroundImageView: UIImageView = UIImageView()
     let centerView = PublishPopCenterView()
-    var didSelectedBlock:((PublishPopItem?) -> Void)?
+    var didSelectedBlock: ((PublishPopItem?) -> Void)?
     var didClickTipButton:(() -> Void)?
     var didClickCloseButton:(() -> Void)?
 

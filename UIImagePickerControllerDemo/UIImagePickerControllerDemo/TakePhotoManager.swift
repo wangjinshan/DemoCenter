@@ -8,11 +8,11 @@
 
 import UIKit
 
-class TakePhotoManager: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+class TakePhotoManager: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var didFinishPickBlock:((_ image: UIImage?) -> Void)?
     var didCancelBlock:(() -> Void)?
-    func takePhoto(controller: UIViewController, isFront: Bool = false, isShowMask: Bool = false, didFinishPickBlock:((_ image: UIImage?) -> Void)?, didCancelBlock:(() ->Void)?) {
+    func takePhoto(controller: UIViewController, isFront: Bool = false, isShowMask: Bool = false, didFinishPickBlock:((_ image: UIImage?) -> Void)?, didCancelBlock:(() -> Void)?) {
         let sourceType: UIImagePickerController.SourceType = .camera
         self.didFinishPickBlock = didFinishPickBlock
         self.didCancelBlock = didCancelBlock
@@ -20,7 +20,7 @@ class TakePhotoManager: NSObject, UIImagePickerControllerDelegate, UINavigationC
         imagePicker.delegate = self
         if UIImagePickerController.isSourceTypeAvailable(sourceType) {
             imagePicker.sourceType = sourceType
-            if isFront, UIImagePickerController.isCameraDeviceAvailable(.front){
+            if isFront, UIImagePickerController.isCameraDeviceAvailable(.front) {
                 imagePicker.cameraDevice = .front
             }
             if isShowMask {
@@ -37,7 +37,7 @@ class TakePhotoManager: NSObject, UIImagePickerControllerDelegate, UINavigationC
         picker.dismiss(animated: true, completion: nil)
     }
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             didFinishPickBlock?(image)
         } else {

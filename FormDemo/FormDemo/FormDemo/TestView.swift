@@ -16,20 +16,15 @@ class TestView: FormViewController {
         view.backgroundColor = UIColor.red
         form
             +++ Section("Section2")
-            <<< DateRow(){
+            <<< DateRow {
                 $0.tag = "MyRowTag3"
                 $0.title = "Date Row"
                 $0.value = Date(timeIntervalSinceReferenceDate: 0)
         }
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-
-
-
-
-    
 }

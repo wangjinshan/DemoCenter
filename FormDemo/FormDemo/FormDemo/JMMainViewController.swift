@@ -1,4 +1,3 @@
-
 //
 //  JMMainViewController.swift
 //  FormDemo
@@ -21,9 +20,8 @@ class JMMainViewController: UIViewController {
         imageView.image = UIImage(named: "1999")
         view.addSubview(imageView)
 
-
         let mainPath = UIBezierPath()
-        mainPath.move(to: CGPoint(x: 40, y: 0)) //开始绘制，表示这个点是起点
+        mainPath.move(to: CGPoint(x: 40, y: 0)) // 开始绘制，表示这个点是起点
         mainPath.addLine(to: CGPoint(x: 40, y: 100))
   //      mainPath.removeAllPoints() //删除所有点和线
         let ddk  = RingView()
@@ -66,9 +64,9 @@ class RingView: UIView {
         let path = UIBezierPath()
         path.usesEvenOddFillRule = false
         path.move(to: CGPoint(x: 0, y: 0))
-        path.addArc(withCenter: CGPoint(x: width / 2.0 , y: height / 2.0 ), radius: width / 2.0, startAngle: 0, endAngle: CGFloat(Double.pi * 2), clockwise: true)
+        path.addArc(withCenter: CGPoint(x: width / 2.0, y: height / 2.0 ), radius: width / 2.0, startAngle: 0, endAngle: CGFloat(Double.pi * 2), clockwise: true)
         path.move(to: CGPoint(x: 0, y: 0))
-        path.addArc(withCenter:  CGPoint(x: width / 2.0 , y: height / 2.0 ), radius: width - ringWidth , startAngle: 0, endAngle: CGFloat(Double.pi * 2), clockwise: false)
+        path.addArc(withCenter: CGPoint(x: width / 2.0, y: height / 2.0 ), radius: width - ringWidth, startAngle: 0, endAngle: CGFloat(Double.pi * 2), clockwise: false)
         UIColor.white.set()
         path.fill()
     }
@@ -81,26 +79,16 @@ class RingView: UIView {
     }()
 }
 
-
-
-
-
-
-
-
-
-
-
-//let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
-//button.backgroundColor = UIColor.red
-//button.alpha = 0.5
-//view.addSubview(button)
+// let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+// button.backgroundColor = UIColor.red
+// button.alpha = 0.5
+// view.addSubview(button)
 //
-//let label = UILabel(frame: CGRect(x: 10, y: 10, width: 80, height: 80))
-//label.text = "这是按钮"
-//label.backgroundColor = UIColor.red
-//label.layer.shouldRasterize = true
-//button.addSubview(label)
+// let label = UILabel(frame: CGRect(x: 10, y: 10, width: 80, height: 80))
+// label.text = "这是按钮"
+// label.backgroundColor = UIColor.red
+// label.layer.shouldRasterize = true
+// button.addSubview(label)
 
 //        let tagView = TagListView()
 //        view.addSubview(tagView)

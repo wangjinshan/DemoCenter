@@ -8,23 +8,21 @@
 
 import UIKit
 
-
 class Demo: NSObject {
     enum Theme {
         case Day
         case Night
     }
     let age = 19
-    var errorCode:String? = nil
-    var errorMessage:String? = "Not found"
-    var error1:(errorCode:Int,errorMessage:String?) = (404,"Not Found")
-    
-    
+    var errorCode: String?
+    var errorMessage: String? = "Not found"
+    var error1:(errorCode: Int, errorMessage: String?) = (404, "Not Found")
+
     override init() {
     }
     private let text: Theme = .Day
-    
-    func loadName(theme : Theme) {
+
+    func loadName(theme: Theme) {
         switch age {
         case 10...19:
             break
@@ -32,54 +30,53 @@ class Demo: NSObject {
             break
         }
         if case 10...19 = age, age >= 12 {
-            
+
         }
-        
-        for case let i  in 1...100 where i % 3 == 0{
+
+        for case let i  in 1...100 where i % 3 == 0 {
             print(i)
         }
-        
+
         guard  theme == .Day else { return  }
-        
+
         for c in "hello wjs" {
             print(type(of: c))
         }
         print(type(of: self))
-        
+
         let str = "Hello, Swift"
         let startIndex = str.startIndex
         print(str[startIndex])
         print(str.prefix(5))
-        
+
         demoStr()
         optionalDemo()
-        var score1 = [11,33,55,22]
+        var score1 = [11, 33, 55, 22]
         changeScores(scores: &score1, by: changeScore1(score:))
         // map 根据条件进行处理
        var temp =  score1.map(changeScore)
         // 筛选
         var temp2 = score1.filter(fail)
-        //聚合
+        // 聚合
        var temp3 = score1.reduce(0, +)
-        
-        
+
     }
 }
 
-extension Demo{
-    
+extension Demo {
+
     convenience init(name: Theme) {
-        self.init();
+        self.init()
     }
     // 字符串
-    func demoStr()  {
+    func demoStr() {
         var name = "我是中国人,我爱中国,wangjinshan"
         let startIndex = name.startIndex
-        
+
         // 截取字符串从头开始
         let sub1 = name.prefix(20)
         print(sub1)
-        //从后
+        // 从后
         print(name.suffix(8))
         // 位置
         let str4 = name.substingInRange(0..<1)
@@ -104,11 +101,11 @@ extension Demo{
         // 插入
         print(name.insert(contentsOf: "卧槽", at: name.index(startIndex, offsetBy: 3)))
         print(name)
-        //删除
+        // 删除
         let  endIndex = name.index(startIndex, offsetBy: 5)
         let  range = startIndex...endIndex
         name.removeSubrange(range)
-        
+
         print("""
             关关雎鸠，在河之洲。
             窈窕淑女，君子好逑。
@@ -123,77 +120,77 @@ extension Demo{
             """)
         print(String(format: "%.2f", 2.0 / 3.0))
         Range(NSRange(location: 0, length: 2))
-        
+
         print(name.range(of: "我")!)
-    
+
     }
-    
+
     func blockDemo(name: (_ block: String) -> (String)) {
         name("ahah")
     }
-    
-    func optionalDemo()  {
+
+    func optionalDemo() {
         errorCode = "404"
-        if let errorCode = errorCode , errorCode == errorMessage, errorCode == "404"{
+        if let errorCode = errorCode, errorCode == errorMessage, errorCode == "404"{
 
         }
 
-        let arr = [1,2,3,4,5]
-        for (index,value) in arr.enumerated() {
-            print(index,value)
+        let arr = [1, 2, 3, 4, 5]
+        for (index, value) in arr.enumerated() {
+            print(index, value)
         }
-        
-        var user = ["name" : "山神"]
+
+        var user = ["name": "山神"]
         // 更新
       var temp2 =  user.updateValue("啊哈哈哈", forKey: "name")
         var temp3  = user.removeValue(forKey: "name")
         user["ccc"] = "you qew "
-    
+
         var someInt = 7
         var anotherInt = 107
         swapTwoInts(a: &someInt, b: &anotherInt)
     }
-    
-    func swapTwoInts( a:inout Int , b:inout Int) {
+
+    func swapTwoInts( a:inout Int, b:inout Int) {
         let temp = a
         a = b
         b = temp
     }
-    
-    func changeScores( scores:inout [Int],by changeScore:(Int) -> Int) {
-        for (index,score) in scores.enumerated() {
-            scores[index] = changeScore(score);
+
+    func changeScores( scores:inout [Int], by changeScore: (Int) -> Int) {
+        for (index, score) in scores.enumerated() {
+            scores[index] = changeScore(score)
         }
     }
-    func changeScore1(score:Int) -> Int {
+    func changeScore1(score: Int) -> Int {
         return Int(sqrt(Double(score)) * 10)
     }
-    func changeScore2(score:Int) -> Int {
+    func changeScore2(score: Int) -> Int {
         return Int(sqrt(Double(score)) * 150 * 100.0)
     }
-    func changeScore(score:Int) -> Int {
+    func changeScore(score: Int) -> Int {
         return Int(score * 10)
     }
-    func fail(score:Int) -> Bool {
+    func fail(score: Int) -> Bool {
         return score < 60
     }
-    func add(num1:Int,_ num2:Int) -> Int {
+    func add(num1: Int, _ num2: Int) -> Int {
         return num1 + num2
     }
-    
+
 }
 
 extension String {
-    //获取子字符串
+    // 获取子字符串
     func substingInRange(_ range: Range<Int>) -> String? {
         if range.lowerBound < 0 || range.upperBound > self.count {
             return nil
         }
-        let startIndex = self.index(self.startIndex, offsetBy:range.lowerBound)
-        let endIndex   = self.index(self.startIndex, offsetBy:range.upperBound)
+        let startIndex = self.index(self.startIndex, offsetBy: range.lowerBound)
+        let endIndex   = self.index(self.startIndex, offsetBy: range.upperBound)
         return String(self[startIndex..<endIndex])
     }
-    func startToEnd(start: Int,end: Int) -> String {
+    func startToEnd(start: Int, end: Int) -> String {
         if !(end < count) || start > end { return "取值范围错误" }
         var tempStr: String = ""
         for i in start...end {
@@ -202,5 +199,5 @@ extension String {
         }
         return tempStr
     }
-    
+
 }

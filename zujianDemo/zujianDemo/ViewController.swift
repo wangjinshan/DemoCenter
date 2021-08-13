@@ -17,10 +17,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func presentAction(_ sender: UIButton) {
-        Router.perform(to: RoutableView<ShopInput>(), path: .presentModally(from: self)) { (config, prepareModule) in
+        Router.perform(to: RoutableView<ShopInput>(), path: .presentModally(from: self)) { (_, _) in
 
         }
     }
-    
-}
 
+}

@@ -12,7 +12,7 @@ import MJRefresh
 class BallRefreshFooterView: MJRefreshAutoFooter {
 
     let ballView = BallRoatationView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 10))
-    
+
     override func prepare() {
         super.prepare()
         mj_h = 86

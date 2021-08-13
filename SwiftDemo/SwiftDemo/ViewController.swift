@@ -12,17 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-        let demo = Demo(name: .Night)
-        demo.loadName(theme: .Day)
-        
-        let temp =  NSArray()
-        temp.adding("weq")
-        temp.adding(NSObject.init())
-        
-        
+
     }
 
-
 }
-

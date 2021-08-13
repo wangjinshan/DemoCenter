@@ -13,21 +13,20 @@ class OpDemo: NSObject {
 }
 
 class City {
-    let cityName:String
-  unowned  var country:Country
-    init(cityName:String,country:Country) {
+    let cityName: String
+  unowned  var country: Country
+    init(cityName: String, country: Country) {
         self.cityName = cityName
         self.country = country
     }
 }
 
 class Country {
-    let countryName:String
-    var capitalCity:City!
-    init(countryName:String,capitalCity:String) {
+    let countryName: String
+    var capitalCity: City!
+    init(countryName: String, capitalCity: String) {
         self.countryName = countryName
         self.capitalCity = City(cityName: capitalCity, country: self)
     }
 }
 // 意义: 暂时可以为null,真正使用的时候就是 具体值
-

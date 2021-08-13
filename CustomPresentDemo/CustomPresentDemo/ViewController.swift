@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-   
+
     }
 
     @IBAction func presentPhoto(_ sender: UIButton) {
@@ -20,9 +20,8 @@ class ViewController: UIViewController {
         let navi = UINavigationController(rootViewController: vc)
         navi.modalPresentationStyle = .overCurrentContext
         present(navi, animated: true) {
-            
+
         }
     }
 
 }
-

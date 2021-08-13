@@ -13,17 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-      
+
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        
+
         let vc = JMMainViewController()
         let navc = UINavigationController(rootViewController: vc)
-        
-        window?.rootViewController = navc
 
+        window?.rootViewController = navc
 
         let str = "http://www.baidu.com\n\nhttp://www.mob.com"
 
@@ -35,10 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let str2 = str1.trimmingCharacters(in: .whitespacesAndNewlines)
 
-
         return true
     }
 
-
 }
-

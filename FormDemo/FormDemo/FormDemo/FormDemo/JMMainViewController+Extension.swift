@@ -9,7 +9,7 @@
 import UIKit
 import Eureka
 
-//extension JMMainViewController {
+// extension JMMainViewController {
     // MARK: - 简单
 //    func formDemo()  {
 //        
@@ -223,11 +223,11 @@ import Eureka
 //        
 //    }
 //
-//}
+// }
 
 // 自定义value类型是Bool的Cell
 // Cell是使用 .xib 定义的，所以我们可以直接设置outlets
-//public class CustomCell: Cell<Bool>, CellType {
+// public class CustomCell: Cell<Bool>, CellType {
 //    
 //    private var switchControl = UISwitch(frame: CGRect(x: 200, y: 10, width: 50, height: 44))
 //    private var label = UILabel(frame: CGRect(x: 10, y: 10, width: 100, height: 44))
@@ -249,21 +249,21 @@ import Eureka
 //        super.update()
 //        backgroundColor = (row.value ?? false) ? .white : .green
 //    }
-//}
+// }
 //
 //// 自定义的Row，拥有CustomCell和对应的value
-//public final class CustomRow: Row<CustomCell>, RowType {
+// public final class CustomRow: Row<CustomCell>, RowType {
 //    required public init(tag: String?) {
 //        super.init(tag: tag)
 //        // 我们把对应CustomCell的 .xib 加载到cellProvidor
 //        cellProvider = CellProvider<CustomCell>()
 //    }
-//}
+// }
 //
 //
 //
 //
-//class MyCustomUIView: UIView {
+// class MyCustomUIView: UIView {
 //    var name:String = "金山" {
 //        didSet{
 //            label.text = name
@@ -278,4 +278,4 @@ import Eureka
 //    required init?(coder aDecoder: NSCoder) {
 //        fatalError("init(coder:) has not been implemented")
 //    }
-//}
+// }

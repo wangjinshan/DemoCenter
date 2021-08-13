@@ -14,13 +14,9 @@ class JMViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
-    
 
     @IBAction func dismissAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-  
 
 }

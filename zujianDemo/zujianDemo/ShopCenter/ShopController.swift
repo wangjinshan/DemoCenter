@@ -12,7 +12,6 @@ class ShopController: UIViewController {
 
     var name = "金山"
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.green
@@ -20,7 +19,7 @@ class ShopController: UIViewController {
     }
 
     @IBAction func userCenter(_ sender: Any) {
-        
+
     }
 
 }

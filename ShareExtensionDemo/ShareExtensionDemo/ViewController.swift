@@ -13,13 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       view.backgroundColor = UIColor.green
-        
+
          UserDefaults.standard.set("10000", forKey: "jmTodayExtensionDemo")
-    
+
           let title = UserDefaults.standard.object(forKey: "jmTodayExtensionDemo") as? String
-        
+
     }
 
-
 }
-

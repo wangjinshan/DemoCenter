@@ -10,7 +10,7 @@ import UIKit
 import CocoaLumberjack
 
 class EventLogger: NSObject, DDLogFormatter {
-    
+
     static let sharedInstance = EventLogger()
 
     override init() {

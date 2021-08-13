@@ -32,7 +32,7 @@ class PublishPopCenterView: UIView {
         }
         homeButtons.removeAll()
         let count = dataSource.numberOfItems(centerView: self)
-        var items:[PublishPopItem] = []
+        var items: [PublishPopItem] = []
         for index in 0 ..< count {
             items.append(dataSource.item(centerView: self, item: index))
         }
@@ -55,7 +55,7 @@ class PublishPopCenterView: UIView {
 
 extension PublishPopCenterView {
 
-    func layoutButton(items:[PublishPopItem]) {
+    func layoutButton(items: [PublishPopItem]) {
         var item: PublishPopItem
         for index in 0 ..< items.count {
             item = items[index]
@@ -161,4 +161,3 @@ extension PublishPopCenterView {
     }
 
 }
-

@@ -36,7 +36,7 @@ class ViewController: UIViewController {
 
     let item6 = PublishPopItem(title: "打卡", icon: "icon_60px_practise")
 
-    pop.showPopView(superView: self.view.window, items: [item1, item2,item3,item4,item5,item6]) { (item) in
+    pop.showPopView(superView: self.view.window, items: [item1, item2, item3, item4, item5, item6]) { (_) in
 
     }
 
@@ -47,4 +47,3 @@ class ViewController: UIViewController {
     }
 
 }
-
